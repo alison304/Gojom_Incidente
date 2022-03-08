@@ -1,0 +1,10 @@
+.container
+  p Asunto:
+  = @advice.subjet
+  p.mt-2 Descripción:
+  = @advice.description
+  p.mt-2 Fecha:
+  = @advice.incident_date.strftime('%d/%m/%Y')
+  p.mt-2 Fotografias
+  - @advice.photos.each do |image|
+    =image_tag image

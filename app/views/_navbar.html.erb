@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <div class="container-fluid">
+   <a class="navbar-brand" href="#">GoJom</a>
+   <div class="" id="navbarSupportedContent">
+     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       <% if user_signed_in? %>
+         <li class="nav-item">
+           <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: "nav-link" %>
+         </li>
+       <% else %>
+         <li class="nav-item">
+           <%= link_to "Iniciar Sesión", new_user_session_path, class: "nav-link" %>
+         </li>
+         <% end %>
+     </ul>
+   </div>
+ </div>
+</nav>

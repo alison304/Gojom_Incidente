@@ -1,2 +1,10 @@
-<h1>Advices#new</h1>
-<p>Find me in app/views/advices/new.html.erb</p>
+<div class="container">
+<h1>Incidente</h2>
+  <%= simple_form_for @advice do |f| %>
+    <%= f.input :incident_date %>
+    <%= f.input :subjet %>
+    <%= f.rich_text_area :description %>
+    <%= f.input :photos, as: :file, input_html: {multiple: true} %>
+    <%= f.submit "Enviar", class: "btn btn-success mt-3" %>
+  <% end %>
+</div>

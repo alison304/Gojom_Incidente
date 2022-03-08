@@ -1,0 +1,3 @@
+Advise#mailer
+
+<%= @greeting %>, find me in app/views/app/views/advise_mailer/mailer.html.mjml

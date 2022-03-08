@@ -1,0 +1,23 @@
+<mj-head>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-text><h1>Incidencia</h1></mj-text>
+      <mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text><p>Asunto: <%= @advice.subjet %></p></mj-text>
+        <mj-text><p>Descripción: <%= @advice.description %></p></mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <% @advice.photos.each do |photo| %>
+          <mj-image><%= image_tag photo, height: 150, width: 250, crop: :fill %></mj-image>
+        <% end %>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
